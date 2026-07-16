@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Elite Barber PR</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+margin:0;
+background:#111;
+color:white;
+}
+
+header{
+background:#000;
+padding:25px;
+text-align:center;
+}
+
+.logo{
+font-size:40px;
+color:#d4af37;
+}
+
+nav a{
+color:white;
+margin:15px;
+text-decoration:none;
+}
+
+.hero{
+height:600px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:
+linear-gradient(#0009,#0009),
+url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1");
+background-size:cover;
+}
+
+.hero h1{
+font-size:55px;
+}
+
+.btn{
+background:#d4af37;
+color:black;
+padding:15px 30px;
+border:none;
+border-radius:5px;
+font-size:18px;
+cursor:pointer;
+}
+
+section{
+padding:50px 10%;
+text-align:center;
+}
+
+.cards{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.card{
+background:#222;
+padding:25px;
+border-radius:15px;
+width:250px;
+}
+
+.gallery{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.photo{
+height:200px;
+width:250px;
+background:#333;
+border-radius:15px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#aaa;
+}
+
+
+.calendar{
+background:#222;
+padding:30px;
+border-radius:15px;
+max-width:500px;
+margin:auto;
+}
+
+
+input, select{
+padding:12px;
+margin:10px;
+width:80%;
+}
+
+
+.review{
+background:#222;
+padding:20px;
+margin:15px;
+border-radius:10px;
+}
+
+
+footer{
+background:#000;
+padding:20px;
+text-align:center;
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+Elite Barber PR
+</div>
+
+<nav>
+<a href="#">Inicio</a>
+<a href="#">Servicios</a>
+<a href="#">Citas</a>
+<a href="#">Contacto</a>
+</nav>
+
+</header>
+
+
+
+<div class="hero">
+
+<div>
+
+<h1>Tu mejor estilo comienza aquí</h1>
+
+<p>Barbería premium en Puerto Rico</p>
+
+<button class="btn">
+Reservar cita
+</button>
+
+</div>
+
+</div>
+
+
+
+
+<section>
+
+<h2>Servicios</h2>
+
+
+<div class="cards">
+
+<div class="card">
+<h3>Skin Fade</h3>
+<p>$25</p>
+</div>
+
+
+<div class="card">
+<h3>Corte + Barba</h3>
+<p>$35</p>
+</div>
+
+
+<div class="card">
+<h3>Diseño</h3>
+<p>$10</p>
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+<section>
+
+<h2>Galería</h2>
+
+
+<div class="gallery">
+
+<div class="photo">
+Foto 1
+</div>
+
+<div class="photo">
+Foto 2
+</div>
+
+<div class="photo">
+Foto 3
+</div>
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section>
+
+<h2>Reserva tu cita</h2>
+
+
+<div class="calendar">
+
+<input id="nombre" type="text" placeholder="Tu nombre">
+
+<select id="servicio">
+
+<option>
+Skin Fade - $25
+</option>
+
+<option>
+Corte + Barba - $35
+</option>
+
+<option>
+Diseño - $10
+</option>
+
+</select>
+
+
+<input id="fecha" type="date">
+
+
+<select id="hora">
+
+<option>
+9:00 AM
+</option>
+
+<option>
+10:00 AM
+</option>
+
+<option>
+11:00 AM
+</option>
+
+<option>
+2:00 PM
+</option>
+
+<option>
+4:00 PM
+</option>
+
+</select>
+
+
+<br>
+
+
+<button class="btn" onclick="reservar()">
+Reservar cita
+</button>
+
+
+</div>
+
+</section>
+
+
+
+
+
+<section>
+
+<h2>Clientes felices</h2>
+
+
+<div class="review">
+
+⭐⭐⭐⭐⭐
+
+<p>
+"Excelente servicio, el mejor fade de Puerto Rico."
+</p>
+
+</div>
+
+
+<div class="review">
+
+⭐⭐⭐⭐⭐
+
+<p>
+"Siempre salgo con un corte brutal."
+</p>
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section>
+
+<h2>Contacto</h2>
+
+<p>📍 San Juan, Puerto Rico</p>
+
+<p>📱 WhatsApp: 787-000-0000</p>
+
+<p>📸 Instagram: @elitebarberpr</p>
+
+
+</section>
+
+
+
+<footer>
+
+© 2026 Elite Barber PR
+
+</footer>
+
+
+
+</body>
+</html>
+
+<script>
+
+function reservar(){
+
+let nombre = document.getElementById("nombre").value;
+
+let servicio = document.getElementById("servicio").value;
+
+let fecha = document.getElementById("fecha").value;
+
+let hora = document.getElementById("hora").value;
+
+
+// Cambia este número por el WhatsApp del barbero
+let telefono = "17874149796";
+
+
+let mensaje =
+"Hola, quiero reservar una cita.%0A%0A" +
+"Nombre: " + nombre +
+"%0AServicio: " + servicio +
+"%0AFecha: " + fecha +
+"%0AHora: " + hora;
+
+
+let url =
+"https://wa.me/" + telefono +
+"?text=" + mensaje;
+
+
+window.open(url, "_blank");
+
+
+}
+
+</script>
