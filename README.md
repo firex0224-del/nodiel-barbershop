@@ -1,2 +1,2 @@
-# nodiel-barbershop
+# nodielbarbershop
 barbershop
